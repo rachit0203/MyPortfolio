@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Layout from './components/Layout';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -36,8 +37,10 @@ function App() {
       <Router 
         future={{
           v7_startTransition: true,
+          v7_relativeSplatPath: true,
         }}
       >
+        <ScrollToTop />
         <AnimatedRoutes />
       </Router>
     </ThemeProvider>

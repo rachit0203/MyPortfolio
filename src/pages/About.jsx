@@ -1,57 +1,86 @@
-import { motion } from 'framer-motion';
-import { FiDownload } from 'react-icons/fi';
-import { FaReact, FaNodeJs, FaAws, FaGitAlt, FaDocker } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiGraphql, SiMongodb, SiPostgresql, SiTailwindcss, SiJest } from 'react-icons/si';
+import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
+import { FaReact, FaNodeJs, FaAws, FaGitAlt, FaDocker } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiGraphql,
+  SiMongodb,
+  SiPostgresql,
+  SiTailwindcss,
+  SiJest,
+  SiExpress,
+} from "react-icons/si";
 
+import { Link } from "react-router-dom";
 const About = () => {
   const skills = [
-    { name: 'React', icon: <FaReact className="w-8 h-8" />, level: 95 },
-    { name: 'TypeScript', icon: <SiTypescript className="w-8 h-8" />, level: 90 },
-    { name: 'Node.js', icon: <FaNodeJs className="w-8 h-8" />, level: 90 },
-    { name: 'Next.js', icon: <SiNextdotjs className="w-8 h-8" />, level: 85 },
-    { name: 'GraphQL', icon: <SiGraphql className="w-8 h-8" />, level: 80 },
-    { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8" />, level: 85 },
-    { name: 'PostgreSQL', icon: <SiPostgresql className="w-8 h-8" />, level: 80 },
-    { name: 'AWS', icon: <FaAws className="w-8 h-8" />, level: 75 },
-    { name: 'Docker', icon: <FaDocker className="w-8 h-8" />, level: 80 },
-    { name: 'Git', icon: <FaGitAlt className="w-8 h-8" />, level: 90 },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-8 h-8" />, level: 95 },
-    { name: 'Jest', icon: <SiJest className="w-8 h-8" />, level: 85 },
+    { name: "React", icon: <FaReact className="w-8 h-8" />, level: 95 },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript className="w-8 h-8" />,
+      level: 90,
+    },
+    { name: "Node.js", icon: <FaNodeJs className="w-8 h-8" />, level: 90 },
+    { name: "Next.js", icon: <SiNextdotjs className="w-8 h-8" />, level: 85 },
+    { name: "SQL", icon: <SiPostgresql className="w-8 h-8" />, level: 80 },
+    { name: "MongoDB", icon: <SiMongodb className="w-8 h-8" />, level: 85 },
+    {
+      name: "PostgreSQL",
+      icon: <SiPostgresql className="w-8 h-8" />,
+      level: 80,
+    },
+    { name: "AWS", icon: <FaAws className="w-8 h-8" />, level: 75 },
+    { name: "Docker", icon: <FaDocker className="w-8 h-8" />, level: 80 },
+    { name: "Git", icon: <FaGitAlt className="w-8 h-8" />, level: 90 },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="w-8 h-8" />,
+      level: 95,
+    },
+    { name: "Express", icon: <SiExpress className="w-8 h-8" />, level: 85 },
   ];
 
   const experiences = [
+    // {
+    //   role: 'Machine Learning Engineer',
+    //   company: 'Tech Solutions Inc.',
+    //   duration: '2021 - Present',
+    //   description: 'Leading the development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.',
+    // },
+    // {
+    //   role: 'Full Stack Developer',
+    //   company: 'Digital Innovations Ltd.',
+    //   duration: '2019 - 2021',
+    //   description: 'Developed and maintained multiple client projects. Implemented CI/CD pipelines and improved application performance by 40%.',
+    // },
     {
-      role: 'Senior Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      duration: '2021 - Present',
-      description: 'Leading the development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.',
-    },
-    {
-      role: 'Full Stack Developer',
-      company: 'Digital Innovations Ltd.',
-      duration: '2019 - 2021',
-      description: 'Developed and maintained multiple client projects. Implemented CI/CD pipelines and improved application performance by 40%.',
-    },
-    {
-      role: 'Frontend Developer',
-      company: 'WebCraft Studios',
-      duration: '2017 - 2019',
-      description: 'Built responsive user interfaces and collaborated with designers to implement pixel-perfect designs.',
+      role: "Machine Learning Intern",
+      company: "Softpro India Ltd.",
+      duration: "June 2024 - July 2024",
+      description:
+        "Developed and optimized machine learning models for multiple disease prediction using Python and scikit-learn.",
     },
   ];
 
   const education = [
     {
-      degree: 'Master of Computer Science',
-      institution: 'Tech University',
-      year: '2015 - 2017',
-      description: 'Specialized in Software Engineering and Cloud Computing',
+      degree: "Bachelor of Technology",
+      institution: "Bundelkhand Instute of Engineering and Technology",
+      year: "2022 - 2026",
+      description: "Specialized in Computer Science and Engineering",
     },
     {
-      degree: 'Bachelor of Technology in Computer Science',
-      institution: 'State University',
-      year: '2011 - 2015',
-      description: 'Graduated with honors',
+      degree: "Class XII (Senior Secondary)",
+      institution: "Kendriya Vidyalaya",
+      year: "2020 - 2021",
+      description: "Science Stream with Mathematics",
+    },
+    {
+      degree: "Class X (Secondary)",
+      institution: "Kendriya Vidyalaya",
+      year: "2018 - 2019",
+      description: "CBSE Board",
     },
   ];
 
@@ -71,13 +100,14 @@ const About = () => {
             </h1>
             <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              I'm a passionate Full Stack Developer with expertise in modern web technologies and cloud solutions.
-              I love building things that live on the internet.
+              I'm a passionate Full Stack Developer with expertise in modern web
+              technologies and cloud solutions. I love building things that live
+              on the internet.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-12 items-center">
-            <motion.div 
+            <motion.div
               className="md:col-span-1 flex justify-center"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -85,13 +115,13 @@ const About = () => {
             >
               <div className="relative">
                 <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 dark:border-primary-dark/30">
-                  <img 
-                    src="/profile.jpg" 
-                    alt="Profile" 
-                    className="w-full h-full object-cover"
+                  <img
+                    src="/profile.jpg"
+                    alt="Profile"
+                    className="w-full h-80 object-cover"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = 'https://via.placeholder.com/256';
+                      e.target.src = "https://placehold.co/256x256/1a1a1a/ffffff?text=Profile";
                     }}
                   />
                 </div>
@@ -101,7 +131,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="md:col-span-2"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -109,14 +139,19 @@ const About = () => {
             >
               <h2 className="text-2xl font-bold mb-6">Who am I?</h2>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                I'm a Full Stack Developer with over 5 years of experience in building web applications. 
-                My journey in web development started when I was in college, and since then, I've been 
-                passionate about creating seamless user experiences and robust backend systems.
+                I am a Full Stack Developer with a strong focus on creating
+                scalable and user-friendly web applications. My journey began
+                during my B.Tech in Computer Science at BIET Jhansi, where I
+                explored web technologies and worked on projects such as a
+                Spotify clone and a machine learning–based disease prediction
+                system.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                I specialize in JavaScript technologies across the stack (React, Node.js, Express, MongoDB) 
-                and have extensive experience working with cloud platforms like AWS. I'm a strong believer in 
-                clean code, testing, and continuous learning.
+                Skilled in the MERN stack (MongoDB, Express.js, React.js,
+                Node.js) and experienced with AWS cloud services, I am
+                passionate about writing clean, efficient code and building
+                solutions that combine performance with a seamless user
+                experience.{" "}
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -127,12 +162,9 @@ const About = () => {
                   Download CV
                   <FiDownload className="group-hover:translate-y-0.5 transition-transform" />
                 </a>
-                <a
-                  href="#contact"
-                  className="btn btn-outline"
-                >
+                <Link to="/contact" className="btn btn-outline">
                   Contact Me
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -142,38 +174,48 @@ const About = () => {
       {/* Skills Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="gradient-text">Skills</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              My <span className="gradient-text">Skills</span>
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Here are the technologies and tools I work with on a regular basis.
+              Here are the technologies and tools I work with on a regular
+              basis.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className="group relative"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.3, delay: index * 0.03 }}
               >
-                <div className="flex items-center justify-center mb-4 text-primary dark:text-primary-dark">
-                  {skill.icon}
-                </div>
-                <h3 className="text-center font-medium mb-2">{skill.name}</h3>
-                <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
+                <div className="flex flex-col items-center p-3 rounded-xl bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm hover:bg-white/80 dark:hover:bg-gray-700/80 transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/20 dark:hover:border-primary/30 hover:shadow-sm">
+                  <div className="text-2xl mb-2 text-primary dark:text-primary-dark transition-transform group-hover:scale-110">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 text-center mb-1.5">
+                    {skill.name}
+                  </h3>
+                  <div className="w-full bg-gray-100 dark:bg-gray-600/50 rounded-full h-1.5 overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
+                    {skill.level}%
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -184,14 +226,16 @@ const About = () => {
       {/* Experience Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Work <span className="gradient-text">Experience</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Work <span className="gradient-text">Experience</span>
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               A summary of my professional journey so far.
             </p>
@@ -209,10 +253,16 @@ const About = () => {
               >
                 <div className="absolute -left-2 w-4 h-4 rounded-full bg-primary dark:bg-primary-dark group-hover:scale-125 transition-transform"></div>
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <span className="text-sm text-primary dark:text-primary-dark font-medium">{exp.duration}</span>
+                  <span className="text-sm text-primary dark:text-primary-dark font-medium">
+                    {exp.duration}
+                  </span>
                   <h3 className="text-xl font-bold mt-1 mb-2">{exp.role}</h3>
-                  <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-3">{exp.company}</h4>
-                  <p className="text-gray-600 dark:text-gray-400">{exp.description}</p>
+                  <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-3">
+                    {exp.company}
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {exp.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -223,14 +273,16 @@ const About = () => {
       {/* Education Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="gradient-text">Education</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              My <span className="gradient-text">Education</span>
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               My academic background and qualifications.
             </p>
@@ -250,8 +302,12 @@ const About = () => {
                   {edu.year}
                 </span>
                 <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
-                <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-3">{edu.institution}</h4>
-                <p className="text-gray-600 dark:text-gray-400">{edu.description}</p>
+                <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-3">
+                  {edu.institution}
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {edu.description}
+                </p>
               </motion.div>
             ))}
           </div>

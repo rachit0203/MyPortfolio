@@ -147,7 +147,7 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/400x250?text=Project+Image';
+                    e.target.src = 'https://placehold.co/400x250/1a1a1a/ffffff?text=Project+Image';
                   }}
                 />
               </div>
@@ -224,7 +224,7 @@ const Projects = () => {
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = 'https://via.placeholder.com/800x400?text=Project+Image';
+                        e.target.src = 'https://placehold.co/800x400/1a1a1a/ffffff?text=Project+Image';
                       }}
                     />
                   </div>

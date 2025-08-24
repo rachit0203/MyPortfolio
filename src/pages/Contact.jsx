@@ -29,9 +29,9 @@ const Contact = () => {
 
     try {
       // Replace these with your actual EmailJS service ID, template ID, and public key
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_otjodew';
+      const templateId = 'template_yhc666p';
+      const publicKey = 'bUoRUl2-kefwN7KQd';
 
       await emailjs.send(
         serviceId,
@@ -60,20 +60,20 @@ const Contact = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
+      value: 'mishrarachitalld@gmail.com',
+      href: 'mailto:mishrarachitalld@gmail.com'
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'San Francisco, CA',
-      href: 'https://maps.google.com/?q=San+Francisco+CA'
+      value: 'Jhansi, Uttar Pradesh',
+      href: 'https://www.google.com/maps?q=Jhansi,+Uttar+Pradesh'
     },
     {
       icon: <FiPhone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 6387714371',
+      href: 'tel:+916387714371'
     }
   ];
 
@@ -81,19 +81,19 @@ const Contact = () => {
     {
       icon: <FaGithub className="w-5 h-5" />,
       name: 'GitHub',
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/rachit0203',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       icon: <FaLinkedin className="w-5 h-5" />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/mishra-rachit/',
       color: 'hover:text-blue-600 dark:hover:text-blue-400'
     },
     {
       icon: <FaTwitter className="w-5 h-5" />,
       name: 'Twitter',
-      url: 'https://twitter.com/yourusername',
+      url: 'https://x.com/_rachit_mishra/',
       color: 'hover:text-sky-500 dark:hover:text-sky-400'
     }
   ];
@@ -148,6 +148,17 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+              <div className="mt-8 rounded-xl overflow-hidden h-64">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.654365314733!2d78.5748724150097!3d25.44814288383388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3977779c0230a2a5%3A0x6e5e9f9f9f9f9f9f!2sJhansi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy"
+                  title="Jhansi Location Map"
+                ></iframe>
+              </div>
             </div>
 
             <div>
