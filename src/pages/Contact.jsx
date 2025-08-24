@@ -29,9 +29,9 @@ const Contact = () => {
 
     try {
       // Replace these with your actual EmailJS service ID, template ID, and public key
-      const serviceId = 'service_otjodew';
-      const templateId = 'template_yhc666p';
-      const publicKey = 'bUoRUl2-kefwN7KQd';
+      const serviceId = process.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = process.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.VITE_EMAILJS_PUBLIC_KEY;
 
       await emailjs.send(
         serviceId,
