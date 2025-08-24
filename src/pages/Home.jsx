@@ -89,7 +89,7 @@ const Home = () => {
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download
                 className="btn btn-outline flex items-center justify-center gap-2 group"
               >

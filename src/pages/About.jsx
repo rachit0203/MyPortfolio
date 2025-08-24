@@ -116,7 +116,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 dark:border-primary-dark/30">
                   <img
-                    src="/profile.jpg"
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
                     alt="Profile"
                     className="w-full h-80 object-cover"
                     onError={(e) => {
@@ -155,7 +155,7 @@ const About = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="/resume.pdf"
+                  href={`${import.meta.env.BASE_URL}resume.pdf`}
                   download
                   className="btn btn-primary flex items-center gap-2 group"
                 >
