@@ -3,10 +3,8 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { FiSend, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-require("dotenv").config();
 
 const Contact = () => {
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,7 +28,7 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // Accessing Vite environment variables
+      // Replace these with your actual EmailJS service ID, template ID, and public key
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -48,15 +46,10 @@ const Contact = () => {
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      console.error('EmailJS Error:', {
-        error,
-        serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY ? 'Key exists' : 'Key missing'
-      });
+      console.error('Error sending email:', error);
       setStatus({
         type: 'error',
-        message: `Failed to send message. Error: ${error.message || 'Unknown error'}`
+        message: 'Failed to send message. Please try again later.'
       });
     } finally {
       setIsSubmitting(false);
