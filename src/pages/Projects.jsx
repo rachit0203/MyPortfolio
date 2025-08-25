@@ -28,7 +28,7 @@ const projects = [
     tags: ['Python', 'Scikit-Learn', 'Streamlit'],
     image: '/projects/social-dashboard.jpg',
     github: 'https://github.com/rachit0203/DiseasePredictionModel',
-    demo: 'https://social-dashboard.example.com',
+    demo: 'https://diseasepredictionmodel-mr.streamlit.app/',
   },
   {
     id: 4,
